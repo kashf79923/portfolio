@@ -1,0 +1,233 @@
+/* ---COLORS--- */
+
+:root {
+    --dark: #1b1a1a;
+    --light: #ebe836;
+    --grey: #f3f3f3;
+}
+
+/* ---BODY--- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body {
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---NAVBAR--- */
+
+#head {
+    position: fixed;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.navbar-style {
+    display: flex;
+    background-color: var(--light);
+    height: 30px;
+    justify-content: right;
+}
+
+li a {
+    color: var(--dark);
+    font-weight: 900;
+}
+
+.nav-op {
+    /* flex: 2; */
+    width: 10em;
+    text-align: center;
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+
+.nav-op:hover {
+    background-color: var(--grey) !important;
+    color: var(--dark);
+    -webkit-transition: width 0.25s;
+    transition: width 0.25s;
+}
+
+.nav-op:focus {
+    color: var(--dark);
+}
+
+/* ---NAME--- */
+
+#row1 {
+    margin-top: 2em;
+    padding-top: 5em;
+    margin-bottom: 5em;
+}
+
+#name {
+    font-size: 2em;
+    color: var(--dark) !important;
+    text-align: center;
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
+#banner {
+    height: 20em;
+    padding-left: 10em;
+}
+
+/* ---ABOUT ME--- */
+
+#row2 {
+    background-color: var(--grey);
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+#image {
+    height: 20em;
+    padding-left: 6em;
+}
+
+/* ---EXPERIENCE--- */
+
+#row11 {
+    background-color: var(--grey);
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+#grass {
+    height: 17em;
+    padding-top: 3em;
+    margin-top: 2em;
+}
+
+/* ---ACADEMICS--- */
+
+#row3 {
+    background-color: var(--grey);
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+/* ---ACHIEVEMENTS--- */
+
+#row4 {
+    background-color: var(--grey);
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-left: 5em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+/* ---SKILLS--- */
+
+#row5 {
+    background-color: var(--grey);
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-left: 3em;
+    padding-bottom: 2em;
+}
+
+/* ---FOOTER--- */
+
+.footer {
+    background-color: var(--dark);
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+#footer-text {
+    color: var(--grey);
+}
+
+.logo {
+    height: 16px;
+    margin: 10px;
+}
+
+#btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.btn {
+    padding-bottom: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    height: 35px;
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--grey);
+    transition: all 0.5s;
+    position: absolute;
+    margin: -100px 0 0 -50px;
+}
+
+.btn span {
+    z-index: 2;
+    display: block;
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 2555, 0.2);
+    background-color: rgba(255, 255, 2555, 0.1);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0);
+}
